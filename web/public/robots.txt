@@ -1,3 +1,0 @@
-# This tells that robots are not welcome on my page.
-User-agent: *
-Disallow: /
