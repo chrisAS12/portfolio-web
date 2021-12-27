@@ -1,9 +1,9 @@
 HTML code - 15% of the final grade
-• The page has to be developed according to HTML 5 or XHTML1.0
-• Strict standard. DOCTYPE has to be declared and the document must conform to it.
-• The document must validate using the W3C validator (http://validator.w3.org).
-• ID and class attributes must be used appropriately throughout the document.
-• HTML elements must be used according to theirsemantics.
+• The page has to be developed according to HTML 5 or XHTML1.0 +
+• Strict standard. DOCTYPE has to be declared and the document must conform to it. +
+• The document must validate using the W3C validator (http://validator.w3.org). /
+• ID and class attributes must be used appropriately throughout the document. +
+• HTML elements must be used according to theirsemantics. +
 • HTML document must contain all of these element types:
 – headings (different levels)
 – lists (ordered and unordered)
