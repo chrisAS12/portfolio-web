@@ -30,7 +30,6 @@ h1 {
 
 main {
     width: 100%;
-    height: 3000vh;
 }
 
 .unscrollable-background {
@@ -50,7 +49,7 @@ main {
 }
 
 .transparent-navbar {
-    background-color: rgba(0, 0, 0, 0.185);
+    background-color: rgba(0, 0, 0, 0.9);
 }
 
 .nav-icon {
@@ -60,4 +59,29 @@ main {
 .welcome-bg {
     background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 1)), url("../img/backgrounds/360542-programming-language-hd-wallpaper.jpg");
     height: 100vh;
+}
+
+.start-bg {
+    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 1)), url("../img/backgrounds/teahubio-nature-background.png");
+    height: 100vh;
+}
+
+.name-form form {
+    width: 20%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.name-form .center {
+    padding-top: 45vh;
+}
+
+.name-form input {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.name-form .btn {
+    background-color: rgb(4, 61, 6);
+    color: white;
 }
