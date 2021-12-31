@@ -22,14 +22,43 @@ html {
     font-size: 14px;
     font-family: "Quicksand", sans-serif;
     color: rgb(234, 226, 183, 1);
+    scroll-snap-type: y mandatory;
+    overflow-y: auto;
 }
 
-h1 {
-    font-size: 10rem;
+@media only screen and (min-width: 1200px) {
+    h1 {
+        font-size: 10rem;
+    }
+    h2 {
+        font-size: 6rem;
+    }
+}
+
+@media only screen and (max-width: 1200px) {
+    h1 {
+        font-size: 8rem;
+    }
+    h2 {
+        font-size: 4rem;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    h1 {
+        font-size: 5rem;
+    }
+    h2 {
+        font-size: 3rem;
+    }
 }
 
 main {
     width: 100%;
+}
+
+section {
+    scroll-snap-align: start;
 }
 
 .unscrollable-background {
@@ -37,6 +66,26 @@ main {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    height: 100vh;
+}
+
+
+/* Ecnourage CSS */
+
+.welcome-bg {
+    background: radial-gradient(circle, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 1)), url("../img/backgrounds/360542-programming-language-hd-wallpaper.jpg");
+}
+
+.cosmos-bg {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 1)), url("../img/backgrounds/3315207.jpg");
+}
+
+.mountains-bg {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 1)), url("../img/backgrounds/108881-simple-nature-wallpaper-top-free-simple-nature-background.jpg");
+}
+
+.rainbow-bg {
+    background: black;
 }
 
 .navbar {
@@ -56,13 +105,40 @@ main {
     font-size: 2rem;
 }
 
-.welcome-bg {
-    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 1)), url("../img/backgrounds/360542-programming-language-hd-wallpaper.jpg");
-    height: 100vh;
+.center {
+    text-align: center;
 }
 
+.welcome-view .center {
+    padding-top: 30vh;
+}
+
+#greeting {
+    color: rgb(214, 40, 40);
+}
+
+.affirmation-view .center {
+    padding-top: 25vh;
+}
+
+.affirmation-view button {
+    font-size: 200%;
+    font-weight: bold;
+    color: white;
+    background-color: purple;
+}
+
+#wish {
+    /*color: rgb(247, 127, 0);*/
+    background-image: linear-gradient(to right, black, rgb(141, 43, 43));
+}
+
+
+/* Start CSS */
+
 .start-bg {
-    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 1)), url("../img/backgrounds/teahubio-nature-background.png");
+    background: radial-gradient(circle, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 1)), url("../img/backgrounds/teahubio-nature-background.png");
+    background-size: 100%;
     height: 100vh;
 }
 
