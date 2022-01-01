@@ -62,7 +62,7 @@
       </div>
     </nav>
     <main>
-      <section class="welcome-view">
+      <section id="welcome-view" class="welcome-view">
         <div class="unscrollable-background welcome-bg">
           <div class="center">
             <h2><i>Hey there</i></h2>
@@ -70,22 +70,140 @@
           </div>
         </div>
       </section>
-      <section class="affirmation-view">
+      <section id="affirmation-view" class="affirmation-view">
         <div class="unscrollable-background cosmos-bg">
           <div class="center">
-            <button type="button" onclick="generateAffirmation();" class="btn btn-lg">
+            <h3>Tell yourself these.</h3>
+            <button
+              type="button"
+              onclick="generateAffirmation();"
+              class="btn btn-lg"
+            >
               Generate an affirmation
             </button>
             <div class="affirmations">
-              <ol class="affirmations-list">
-              </ol>
+              <ol class="affirmations-list"></ol>
             </div>
           </div>
         </div>
       </section>
-      <section class="WIP-view">
+      <section id="form-view" class="form-view">
         <div class="unscrollable-background mountains-bg">
-          <h1>WIP</h1>
+          <div class="center">
+            <h3>Contact me.</h3>
+            <form
+              class="row g-3"
+              id="user-form"
+              action="https://www.w3schools.com/action_page.php "
+              method="GET"
+              novalidate
+            >
+              <div class="col-md-6">
+                <label for="fname" class="form-label">First name</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="name"
+                  value=""
+                  name="name"
+                  required
+                />
+                <div class="invalid-feedback">
+                  Please enter your first name.
+                </div>
+                <div class="valid-feedback">OK</div>
+              </div>
+              <div class="col-md-6">
+                <label for="lname" class="form-label">Last name</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="lname"
+                  value=""
+                  name="lname"
+                  required
+                />
+                <div class="invalid-feedback">Please enter your surname.</div>
+                <div class="valid-feedback">OK</div>
+              </div>
+              <div class="col-12">
+                <label for="username" class="form-label">Username</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="username"
+                  name="username"
+                  required
+                />
+                <div class="invalid-feedback">Please choose a username.</div>
+                <div class="valid-feedback">OK</div>
+              </div>
+              <div class="col-md-9">
+                <label for="address" class="form-label">Address</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="address"
+                  name="address"
+                  required
+                />
+                <div class="invalid-feedback">
+                  Please enter a valid address.
+                </div>
+                <div class="valid-feedback">OK</div>
+              </div>
+              <div class="col-md-3">
+                <label for="zip" class="form-label">Zip code</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="zip"
+                  name="zip"
+                  required
+                />
+                <div class="valid-feedback">OK</div>
+                <div class="invalid-feedback">
+                  Please provide a valid zip code.
+                </div>
+              </div>
+              <div class="col-12">
+                <label for="age" class="form-label">Age</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="age"
+                  name="age"
+
+                  aria-describedby="inputGroupPrepend"
+                  required
+                />
+                <div class="invalid-feedback">Please set your age.</div>
+                <div class="valid-feedback">OK</div>
+              </div>
+              <div class="col-12">
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    value=""
+                    id="invalidCheck"
+                    required
+                  />
+                  <label class="form-check-label" for="invalidCheck">
+                    Agree to Terms of Service.
+                  </label>
+                  <div class="invalid-feedback">
+                    You must agree before submitting.
+                  </div>
+                </div>
+              </div>
+              <div class="col-12">
+                <button class="btn btn-primary" type="submit">
+                  Submit form
+                </button>
+              </div>
+            </form>
+          </div>
         </div>
       </section>
     </main>
@@ -93,20 +211,28 @@
       <section id="motivation-footer" class="footer">
         <div class="unscrollable-background footer-bg">
           <div class="center">
+            <h3>Thank you!</h3>
             <ul>
+              <li>Author: Krišjānis Mārtiņš Alliks.</li>
+              <li>Course project for my bachelor studies.</li>
               <li>
-                Author: Krišjānis Mārtiņš Alliks.
-              </li>
-              <li>
-                  Course project for my bachelor studies.
-              </li>
-              <li>
-                Have a great day <b><p class="username">anonymous</p></b>
+                Have a great day
+                <p class="username">anonymous</p>
               </li>
             </ul>
-            <button type="button" onclick="changeFooterBackground();" class="btn bg-info btn-sm">
-              Change background
-            </button>
+            <button
+              type="button"
+              onclick="changeFooterBackground();"
+              class="btn bg-info btn-sm"
+            >
+              Change background</button
+            ><br />
+            <img
+              src="../img/global/153433394_3964014943629235_3784995062726901149_n.png"
+              alt="The University of Latvia, Faculty of Computing logo"
+              width="200"
+              height="200"
+            />
           </div>
         </div>
       </section>
@@ -129,6 +255,5 @@
     ></script>
     <script src="/course-project-2021/js/jquery-3.6.0.min.js"></script>
     <link rel="stylesheet" href="/course-project-2021/css/style.css" />
-
   </body>
 </html>

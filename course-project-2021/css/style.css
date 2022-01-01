@@ -72,6 +72,10 @@ section {
 
 /* Ecnourage CSS */
 
+.username {
+    font-weight: bold;
+}
+
 .welcome-bg {
     background: radial-gradient(circle, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 1)), url("../img/backgrounds/360542-programming-language-hd-wallpaper.jpg");
 }
@@ -118,12 +122,17 @@ section {
 }
 
 .affirmation-view .center {
-    padding-top: 25vh;
+    padding-top: 15vh;
 }
 
-.affirmation-view p {
+.affirmation-view li {
     padding-top: 1em;
     font-size: 2rem;
+    display: list-item;
+}
+
+.affirmation-view ol {
+    list-style: decimal inside;
 }
 
 .affirmation-view button {
@@ -131,6 +140,19 @@ section {
     font-weight: bold;
     color: white;
     background-color: purple;
+}
+
+.form-view .center {
+    padding-top: 20vh;
+}
+
+.form-view form {
+    margin-left: 25%;
+    width: 50%;
+}
+
+.form-view form input {
+    text-align: center;
 }
 
 #wish {
@@ -153,6 +175,11 @@ section {
     display: inline-block;
     width: 1em;
     margin-left: -1em;
+}
+
+.footer img {
+    margin-top: 5vh;
+    border: 5px solid #555;
 }
 
 
