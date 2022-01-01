@@ -24,6 +24,7 @@ html {
     color: rgb(234, 226, 183, 1);
     scroll-snap-type: y mandatory;
     overflow-y: auto;
+    overflow-x: hidden;
 }
 
 @media only screen and (min-width: 1200px) {
@@ -88,23 +89,6 @@ section {
     background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 1)), url("../img/backgrounds/108881-simple-nature-wallpaper-top-free-simple-nature-background.jpg");
 }
 
-.navbar {
-    justify-content: center;
-    list-style: none;
-    display: none;
-    text-align: center;
-    align-items: center;
-    float: right;
-}
-
-.transparent-navbar {
-    background-color: rgba(0, 0, 0, 0.9);
-}
-
-.nav-icon {
-    font-size: 2rem;
-}
-
 .center {
     text-align: center;
 }
@@ -143,7 +127,7 @@ section {
 }
 
 .form-view .center {
-    padding-top: 20vh;
+    padding-top: 10vh;
 }
 
 .form-view form {
@@ -155,8 +139,33 @@ section {
     text-align: center;
 }
 
+.form-view label {
+    font-size: 2rem;
+}
+
+.form-view input {
+    width: 100%;
+    padding: 5px;
+    border: 1px solid rgb(247, 127, 0);
+    border-radius: 10px;
+    resize: vertical;
+}
+
+.form-view input[type="submit"] {
+    margin-top: 2rem;
+    font-size: 200%;
+}
+
+.form-view #show-footer {
+    margin-top: 1rem;
+    border: 3px dotted rgb(247, 127, 0);
+    font-weight: bold;
+    border-radius: 10px;
+    padding: 5px;
+    background-color: rgb(252, 191, 73);
+}
+
 #wish {
-    /*color: rgb(247, 127, 0);*/
     background-image: linear-gradient(to right, black, rgb(141, 43, 43));
 }
 

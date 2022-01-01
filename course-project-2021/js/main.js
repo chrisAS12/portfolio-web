@@ -23,109 +23,61 @@ function changeFooterBackground() {
     }
 }
 
-
-/*
-  var navbar = document.getElementById("navbar");
- 
-    window.addEventListener("scroll", function() {
-        console.log(window.scrollY);
-        window.scrollY > 100 ?
-            (navbar.style.display = "block") :
-            (navbar.style.display = "none");
-    });
-    */
-/*
-    document.body.addEventListener('scroll', function() {
-        const main = document.querySelector('#main');
-
-        if (main.scrollTop > 50) {
-            console.log("no123");
-        } else {}
-
-        if (main.scrollTop > window.innerHeight / 2) {} else { console.log("hi123"); }
-
-    });*/
-
-/*
-function validateForm() {
-    let form = document.userForm;
-    console.log(parseInt(form["age"].value).toString());
-    console.log(form["age"].value);
-    if (parseInt(form["age"].value).toString() == form["age"].value) {
-        alert("Age was not defined as an integer");
-        return false;
-    } else if (form["age"].value.charAt(0) === "-") {
-        alert("Age cannot be negative");
+function validation() {
+    var letters = /^[A-Za-z]+$/;
+    if (!document.uform.fname.value.match(letters)) {
+        alert('You can only input letters into "First name" field!');
         return false;
     }
-    return false;
+
+    if (!document.uform.surname.value.match(letters)) {
+        alert('You can only input letters into "Surname " field!');
+        return false;
+    }
+
+    if (isNaN(parseInt(document.uform.age.value))) {
+        alert("You have to specify your age!");
+        return false;
+    }
+    if (
+        isNaN(parseInt(document.uform.phone.value)) ||
+        document.uform.phone.value.match(/^[0-9]+$/) == null ||
+        document.uform.phone.value.length != 8
+    ) {
+        alert(
+            "Your phone number can't contain anything except numbers and has to be 8 symbols long."
+        );
+        return false;
+    }
+    alert("Will contact you when possible!");
+    return true;
 }
 
-function formValidation() {
+function showFooter() {
+    let showFooterButton = document.getElementById("show-footer");
+    if (showFooterButton.innerText == "Show bonus section") {
+        showFooterButton.innerText = "Hide bonus section";
+    } else {
+        showFooterButton.innerText = "Show bonus section";
+    }
+    swapFooterDisplay();
 
 }
-*/
 
-function formSubmit(event) {
-    var url = "https://www.w3schools.com/action_page.php";
-    var request = new XMLHttpRequest();
-    request.open('get', url);
-    request.onload = function() { // request successful
-        console.log(request.responseText);
-    };
+function swapFooterDisplay() {
+    let footer = document.getElementById("encourage-footer");
+    console.log(footer.style.display);
+    if (footer.style.display == "" || footer.style.display == "block") {
+        footer.style.display = "none";
+    } else {
+        footer.style.display = "block";
 
-    request.onerror = function() {
-        alert("Unsuccessful post.");
-    };
-
-    request.send(new FormData(event.target));
-    event.preventDefault();
+    }
 }
-
-// and you can attach form submit event like this for example
-function attachFormSubmitEvent(formId) {
-    document.getElementById(formId).addEventListener("submit", formSubmit);
-}
-
-
-/*
-(function() {
-    "use strict";
-
-    var form = document.getElementById("user-form");
-
-    form.addEventListener(
-        "submit",
-        function(event) {
-            function failed() {
-                event.preventDefault();
-                event.stopPropagation();
-            }
-            if (!form.checkValidity()) {
-                failed();
-            }
-            console.log(form);
-            if (parseInt(form["age"].value).toString().length === form["age"].value.length) {
-                console.log("Age was not defined as an intege");
-                document.getElementById("age-invalid-feedback").innerHTML = "Age was not defined as an integer.";
-                failed();
-            } else if (form["age"].value.charAt(0) === "-") {
-                console.log("negative age");
-                document.getElementById("age-invalid-feedback").innerHTML = "Age cannot be negative.";
-                failed();
-            } else {
-                form.classList.add("was-validated");
-            }
-        },
-        false
-    );
-})();
-*/
 
 function load() {
-
-    document.getElementById("uform").addEventListener("submit", formSubmit);
     changeFooterBackground();
+    swapFooterDisplay();
 
     let name = decodeURIComponent(window.location.search.replace("?name=", ""));
     if (name != "") {
