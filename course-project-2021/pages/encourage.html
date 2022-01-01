@@ -97,7 +97,9 @@
               class="row g-3"
               id="user-form"
               action="https://www.w3schools.com/action_page.php "
-              method="GET"
+              method="POST"
+              onsubmit="return validateForm();"
+              name="userForm"
               novalidate
             >
               <div class="col-md-6">
@@ -108,12 +110,12 @@
                   id="name"
                   value=""
                   name="name"
+                  autocomplete="off"
                   required
                 />
                 <div class="invalid-feedback">
                   Please enter your first name.
                 </div>
-                <div class="valid-feedback">OK</div>
               </div>
               <div class="col-md-6">
                 <label for="lname" class="form-label">Last name</label>
@@ -123,10 +125,10 @@
                   id="lname"
                   value=""
                   name="lname"
+                  autocomplete="off"
                   required
                 />
                 <div class="invalid-feedback">Please enter your surname.</div>
-                <div class="valid-feedback">OK</div>
               </div>
               <div class="col-12">
                 <label for="username" class="form-label">Username</label>
@@ -135,10 +137,10 @@
                   class="form-control"
                   id="username"
                   name="username"
+                  autocomplete="off"
                   required
                 />
                 <div class="invalid-feedback">Please choose a username.</div>
-                <div class="valid-feedback">OK</div>
               </div>
               <div class="col-md-9">
                 <label for="address" class="form-label">Address</label>
@@ -147,12 +149,12 @@
                   class="form-control"
                   id="address"
                   name="address"
+                  autocomplete="off"
                   required
                 />
                 <div class="invalid-feedback">
                   Please enter a valid address.
                 </div>
-                <div class="valid-feedback">OK</div>
               </div>
               <div class="col-md-3">
                 <label for="zip" class="form-label">Zip code</label>
@@ -161,9 +163,9 @@
                   class="form-control"
                   id="zip"
                   name="zip"
+                  autocomplete="off"
                   required
                 />
-                <div class="valid-feedback">OK</div>
                 <div class="invalid-feedback">
                   Please provide a valid zip code.
                 </div>
@@ -175,12 +177,10 @@
                   class="form-control"
                   id="age"
                   name="age"
-
-                  aria-describedby="inputGroupPrepend"
+                  autocomplete="off"
                   required
                 />
                 <div class="invalid-feedback">Please set your age.</div>
-                <div class="valid-feedback">OK</div>
               </div>
               <div class="col-12">
                 <div class="form-check">

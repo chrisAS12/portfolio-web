@@ -52,6 +52,31 @@ function load() {
       });*/
 }
 
+function validateForm() {
+    let form = document.userForm;
+
+    function failed() {
+        return false;
+    }
+
+    if (!form.checkValidity()) {
+        return failed();
+    }
+    console.log(form);
+    if (parseInt(form["age"].value).toString().length === form["age"].value.length) {
+        alert("Age was not defined as an integer");
+        document.getElementById("age-invalid-feedback").innerHTML = "Age was not defined as an integer.";
+        return failed();
+    } else if (form["age"].value.charAt(0) === "-") {
+        alert("Age cannot be negative");
+        document.getElementById("age-invalid-feedback").innerHTML = "Age cannot be negative.";
+        return failed();
+    } else {
+        form.classList.add("was-validated");
+    }
+    return false;
+}
+/*
 (function() {
     "use strict";
 
@@ -67,9 +92,20 @@ function load() {
             if (!form.checkValidity()) {
                 failed();
             }
-            console.log("asdasd");
-            form.classList.add("was-validated");
+            console.log(form);
+            if (parseInt(form["age"].value).toString().length === form["age"].value.length) {
+                console.log("Age was not defined as an intege");
+                document.getElementById("age-invalid-feedback").innerHTML = "Age was not defined as an integer.";
+                failed();
+            } else if (form["age"].value.charAt(0) === "-") {
+                console.log("negative age");
+                document.getElementById("age-invalid-feedback").innerHTML = "Age cannot be negative.";
+                failed();
+            } else {
+                form.classList.add("was-validated");
+            }
         },
         false
     );
 })();
+*/
