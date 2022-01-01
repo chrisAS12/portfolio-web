@@ -36,7 +36,6 @@
       integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
       crossorigin="anonymous"
     />
-    <link rel="stylesheet" href="/course-project-2021/css/style.css" />
   </head>
   <body onload="load()">
     <nav
@@ -74,9 +73,13 @@
       <section class="affirmation-view">
         <div class="unscrollable-background cosmos-bg">
           <div class="center">
-            <button type="button" class="btn btn-lg">
+            <button type="button" onclick="generateAffirmation();" class="btn btn-lg">
               Generate an affirmation
             </button>
+            <div class="affirmations">
+              <ol class="affirmations-list">
+              </ol>
+            </div>
           </div>
         </div>
       </section>
@@ -87,22 +90,23 @@
       </section>
     </main>
     <footer>
-      <section class="footer">
-        <div class="unscrollable-background rainbow-bg">
+      <section id="motivation-footer" class="footer">
+        <div class="unscrollable-background footer-bg">
           <div class="center">
             <ul>
               <li>
-                <h1>Author: Krišjānis Mārtiņš Alliks.</h1>
+                Author: Krišjānis Mārtiņš Alliks.
               </li>
               <li>
-                <h2>
                   Course project for my bachelor studies.
-                </h2>
               </li>
               <li>
-                <h2 id="wish">Hope you have a great day!</h2>
+                Have a great day <b><p class="username">anonymous</p></b>
               </li>
             </ul>
+            <button type="button" onclick="changeFooterBackground();" class="btn bg-info btn-sm">
+              Change background
+            </button>
           </div>
         </div>
       </section>
@@ -124,5 +128,7 @@
       crossorigin="anonymous"
     ></script>
     <script src="/course-project-2021/js/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" href="/course-project-2021/css/style.css" />
+
   </body>
 </html>

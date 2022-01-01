@@ -84,10 +84,6 @@ section {
     background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 1)), url("../img/backgrounds/108881-simple-nature-wallpaper-top-free-simple-nature-background.jpg");
 }
 
-.rainbow-bg {
-    background: black;
-}
-
 .navbar {
     justify-content: center;
     list-style: none;
@@ -117,8 +113,17 @@ section {
     color: rgb(214, 40, 40);
 }
 
+.affirmation-view {
+    overflow-y: hidden;
+}
+
 .affirmation-view .center {
     padding-top: 25vh;
+}
+
+.affirmation-view p {
+    padding-top: 1em;
+    font-size: 2rem;
 }
 
 .affirmation-view button {
@@ -131,6 +136,23 @@ section {
 #wish {
     /*color: rgb(247, 127, 0);*/
     background-image: linear-gradient(to right, black, rgb(141, 43, 43));
+}
+
+.footer ul {
+    list-style: none;
+}
+
+.footer .center {
+    padding-top: 25vh;
+}
+
+.footer ul li::before {
+    content: "\2022";
+    /* unicode for bullet */
+    color: rgb(0, 245, 20);
+    display: inline-block;
+    width: 1em;
+    margin-left: -1em;
 }
 
 
