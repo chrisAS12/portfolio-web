@@ -219,3 +219,8 @@ section {
     background-color: rgb(4, 61, 6);
     color: white;
 }
+
+.footer .social-footer {
+    margin-top: 50px;
+    font-size: 20px;
+}
