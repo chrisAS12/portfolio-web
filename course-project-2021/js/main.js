@@ -61,7 +61,6 @@ function showFooter() {
         showFooterButton.innerText = "Show bonus section";
     }
     swapFooterDisplay();
-
 }
 
 function swapFooterDisplay() {
@@ -71,7 +70,6 @@ function swapFooterDisplay() {
         footer.style.display = "none";
     } else {
         footer.style.display = "block";
-
     }
 }
 
