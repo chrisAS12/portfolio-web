@@ -67,6 +67,7 @@ section {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    width: 100%;
     height: 100vh;
 }
 
@@ -78,15 +79,15 @@ section {
 }
 
 .welcome-bg {
-    background: radial-gradient(circle, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 1)), url("../img/backgrounds/360542-programming-language-hd-wallpaper.jpg");
+    background-image: radial-gradient(circle, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 1)), url("../img/backgrounds/360542-programming-language-hd-wallpaper.jpg");
 }
 
 .cosmos-bg {
-    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 1)), url("../img/backgrounds/3315207.jpg");
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 1)), url("../img/backgrounds/3315207.jpg");
 }
 
 .mountains-bg {
-    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 1)), url("../img/backgrounds/108881-simple-nature-wallpaper-top-free-simple-nature-background.jpg");
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 1)), url("../img/backgrounds/108881-simple-nature-wallpaper-top-free-simple-nature-background.jpg");
 }
 
 .center {
